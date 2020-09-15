@@ -210,6 +210,9 @@
 <section data-auto-animate>
   <h2>What Makes a test flakey?</h2>
   <span><a href='https://github.com/BenGlasser/flakey-tests/tree/master/flakey_examples'>https://github.com/BenGlasser/flakey-tests/tree/master/flakey_examples</a></span>
+  <aside class="notes">
+  examples to follow along can be found here.
+  </aside>
 </section>
 <section data-auto-animate>
   <h2>What Makes a test flakey?</h2>
