@@ -68,9 +68,8 @@
   <h2>Agenda</h2>
   <ul>
     <li>Why do we test?</li>
-    <li>What is a flakey test and why do we care?</li>
-    <li>What to avoid </li>
-    <li>How to discover</li>
+    <li>What makes a test flakey?</li>
+    <li>What to look out for </li>
     <li>Mitagation</li>
     <li>Q&A</li>
   </ul>
@@ -83,9 +82,8 @@
   <h2>Agenda</h2>
   <ul>
     <li style='color:#13DAEC;'>Why do we test?</li>
-    <li>What is a flakey test and why do we care?</li>
-    <li>What to avoid </li>
-    <li>How to discover</li>
+    <li>What makes a test flakey?</li>
+    <li>What to look out for </li>
     <li>Mitagation</li>
     <li>Q&A</li>
   </ul>
@@ -98,9 +96,8 @@
   <h2>Agenda</h2>
   <ul>
     <li>Why do we test?</li>
-    <li style='color:#13DAEC;'>What is a flakey test and why do we care?</li>
-    <li>What to avoid </li>
-    <li>How to discover</li>
+    <li style='color:#13DAEC;'>What makes a test flakey?</li>
+    <li>What to look out for </li>
     <li>Mitagation</li>
     <li>Q&A</li>
   </ul>
@@ -112,9 +109,8 @@
   <h2>Agenda</h2>
   <ul>
     <li>Why do we test?</li>
-    <li>What is a flakey test and why do we care?</li>
-    <li style='color:#13DAEC;'>What to avoid </li>
-    <li>How to discover</li>
+    <li>What makes a test flakey?</li>
+    <li style='color:#13DAEC;'>What to look out for </li>
     <li>Mitagation</li>
     <li>Q&A</li>
   </ul>
@@ -126,23 +122,8 @@
   <h2>Agenda</h2>
   <ul>
     <li>Why do we test?</li>
-    <li>What is a flakey test and why do we care?</li>
-    <li>What to avoid </li>
-    <li style='color:#13DAEC;'>How to discover</li>
-    <li>Mitagation</li>
-    <li>Q&A</li>
-  </ul>
-  <aside class="notes"> 
-      ask for "hands" professionals, devs, qa?
-  </aside>
-</section>
-<section data-auto-animate>
-  <h2>Agenda</h2>
-  <ul>
-    <li>Why do we test?</li>
-    <li>What is a flakey test and why do we care?</li>
-    <li>What to avoid </li>
-    <li>How to discover</li>
+    <li>What makes a test flakey?</li>
+    <li>What to look out for </li>
     <li style='color:#13DAEC;'>Mitagation</li>
     <li>Q&A</li>
   </ul>
@@ -154,9 +135,8 @@
   <h2>Agenda</h2>
   <ul>
     <li>Why do we test?</li>
-    <li>What is a flakey test and why do we care?</li>
-    <li>What to avoid </li>
-    <li>How to discover</li>
+    <li>What makes a test flakey?</li>
+    <li>What to look out for </li>
     <li>Mitagation</li>
     <li style='color:#13DAEC;'>Q&A</li>
   </ul>
@@ -221,29 +201,15 @@
 ---
 
 <!---------------------------------------------------->
-<!-- What Makes a test flakey? -->
+<!----------- WHAT MAKES A TEST FLAKEY? -------------->
 <!---------------------------------------------------->
 
 <section data-auto-animate>
   <h2>What Makes a test flakey?</h2>
-
-  <h3 class="hidden">false negatives</h3>
-  <div class="hidden">
-    <pre><code class="elixir" data-trim data-noescape data-line-numbers>   
-    </code></pre>
-  </div>
-  <aside class="notes">
-    Story time: 
-
-    first started spend a lot of time when a test would fail tracking it down fixing something then run the test again and it passes.  then push it up and it would fail. WTF?!
-
-    Then after a while of that I got jaded and bitter and would just ignore them.
-    Spam the test button until it passed
-
-    Now I'm angry action must be taken to defeat this enemy.  I can ignore them no longer there has to be a better way
-
-    that's why we're here.
-  </aside>
+</section>
+<section data-auto-animate>
+  <h2>What Makes a test flakey?</h2>
+  <span><a href='https://github.com/BenGlasser/flakey-tests/tree/master/flakey_examples'>https://github.com/BenGlasser/flakey-tests/tree/master/flakey_examples</a></span>
 </section>
 <section data-auto-animate>
   <h2>What Makes a test flakey?</h2>
@@ -330,21 +296,80 @@
 
 ---
 
-## What to look for
- 
- * assert true/false
- * race conditions
-   * timing
-   * data interdependence
- * asynchronous processes
+<!---------------------------------------------------->
+<!----------- WHAT TO LOOK OUT FOR ------------------->
+<!---------------------------------------------------->
 
-Note: an ounce of prevention is worth  a  pound of cure
-
+<section data-auto-animate>
+<h2>What to look out for</h2>
+<aside class="notes">
+an ounce of prevention is worth  a  pound of cure
+</aside>
+</section>
+<section data-auto-animate>
+<h2>What to look out for</h2>
+ <ul>
+ <li style='color:#13DAEC;'>assert true/false</li>
+ <li>asynchronous processes</li>
+ <li>mutability</li>
+ <li>race conditions</li>
+   <ul>
+     <li>timing</li>
+     <li>data interdependence</li>
+   </ul>
+</ul>
+<aside class="notes">
 asserts with bare booleans only test that a certain point was reached in the code flow.  Level up by actually testing the condition you care about
-
-race conditions due to dependency on state tricky to spot.  is it in the test or the code base
-
+</aside>
+</section>
+<section data-auto-animate>
+<h2>What to look out for</h2>
+ <ul>
+ <li>assert true/false</li>
+ <li style='color:#13DAEC;'>asynchronous processes</li>
+ <li>mutability</li>
+ <li>race conditions</li>
+   <ul>
+     <li>timing</li>
+     <li>data interdependence</li>
+   </ul>
+</ul>
+<aside class="notes">
 asynch tests can get weird fast. be aware of the lifecycles involved in running your tests.  when do things happen? 
+</aside>
+</section>
+<section data-auto-animate>
+<h2>What to look out for</h2>
+ <ul>
+ <li>assert true/false</li>
+ <li>asynchronous processes</li>
+ <li style='color:#13DAEC;'>mutability</li>
+ <li>race conditions</li>
+   <ul>
+     <li>timing</li>
+     <li>data interdependence</li>
+   </ul>
+</ul>
+<aside class="notes">
+Has any data mutated out from underneath you?  How would you know? resisting the urge to mutate data can help.  compilation tools can help prevent mutation.  use keywords like `const` and `final`
+</aside>
+</section>
+<section data-auto-animate>
+<h2>What to look out for</h2>
+ <ul>
+ <li>assert true/false</li>
+ <li>asynchronous processes</li>
+ <li>mutability</li>
+ <li style='color:#13DAEC;'>race conditions</li>
+   <ul style='color:#13DAEC;'>
+     <li>timing</li>
+     <li>data interdependence</li>
+   </ul>
+</ul>
+<aside class="notes">
+race conditions due to dependency on state tricky to spot.  is it in the test or the code base.  mutations and timeg boil down to this
+</aside>
+</section>
 
 ---
 
@@ -352,13 +377,65 @@ asynch tests can get weird fast. be aware of the lifecycles involved in running 
 <!---------------- MITIGATION ------------------------>
 <!---------------------------------------------------->
 
-## Mitigation 
-
-* test your tests
-* quarantine flakes
-* search and destroy false positives
-* fakes are bugs, put them in the backlog
-* promote a culture of testing
+<section data-auto-animate><h2>Mitigation</h2></section> 
+<section data-auto-animate>
+  <h2>Mitigation</h2>
+  <ul>
+    <li style='color:#13DAEC;'>test your tests</li>
+    <li>quarantine flakes</li>
+    <li>search and destroy false positives</li>
+    <li>fakes are bugs, put them in the backlog</li>
+    <li>promote a culture of testing</li>
+  </ul>
+</section>
+<section data-auto-animate>
+  <h2>Mitigation</h2>
+  <ul>
+    <li>test your tests</li>
+    <li style='color:#13DAEC;'>quarantine flakes</li>
+    <li>search and destroy false positives</li>
+    <li>fakes are bugs, put them in the backlog</li>
+    <li>promote a culture of testing</li>
+  </ul>
+</section>
+<section data-auto-animate>
+  <h2>Mitigation</h2>
+  <ul>
+    <li>test your tests</li>
+    <li>quarantine flakes</li>
+    <li style='color:#13DAEC;'>search and destroy false positives</li>
+    <li>fakes are bugs, put them in the backlog</li>
+    <li>promote a culture of testing</li>
+  </ul>
+</section>
+<section data-auto-animate>
+  <h2>Mitigation</h2>
+  <ul>
+    <li>test your tests</li>
+    <li>quarantine flakes</li>
+    <li>search and destroy false positives</li>
+    <li style='color:#13DAEC;'>fakes are bugs, put them in the backlog</li>
+    <li>promote a culture of testing</li>
+  </ul>
+</section>
+<section data-auto-animate>
+  <h2>Mitigation</h2>
+  <ul>
+    <li>test your tests</li>
+    <li>quarantine flakes</li>
+    <li>search and destroy false positives</li>
+    <li>fakes are bugs, put them in the backlog</li>
+    <li style='color:#13DAEC;'>promote a culture of testing</li>
+  </ul>
+</section>
+<section data-auto-animate>
+  <h2>Mitigation</h2>
+  <img src='/assets/flow1.svg' width=800px height=400px/>
+</section>
+<section data-auto-animate>
+  <h2>Mitigation</h2>
+  <img src='/assets/flow2.svg'/>
+</section>
 
 ---
 
