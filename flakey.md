@@ -225,6 +225,7 @@
   </code></pre>
   </div>
   <aside class="notes">
+  these are usually pretty apparent and don't get checked in
   </aside>
 </section>
 </section>
@@ -243,6 +244,13 @@
   </code></pre>
   </div>
   <aside class="notes">
+  these are a bit more insideous.  
+  they always pass but they dont test anything.
+  they are hard to find because they don't make noise
+
+  first line throws error
+  assertion is never executed
+  error is caught and test passes fine 
   </aside>
 </section>
 <section data-auto-animate>
@@ -266,6 +274,8 @@
   </code></pre>
   </div>
   <aside class="notes">
+    if the request takes longer than the timeout the error is caught and the test passes
+    if the request doesn't time out the assertion passes and so do the tests
   </aside>
 </section>
 <section data-auto-animate>
@@ -291,6 +301,7 @@
   </code></pre>
   </div>
   <aside class="notes">
+  this test adds an assertion to flag catch the failure but doesn't aleviate the problem of the timeout
   </aside>
 </section>
 
