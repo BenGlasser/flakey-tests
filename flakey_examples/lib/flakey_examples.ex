@@ -19,4 +19,6 @@ defmodule FlakeyExamples do
   end
 
   def throws_error(), do: raise "https://youtu.be/RfiQYRn7fBg"
+
+  def returns_error(), do: {:error, "https://www.youtube.com/watch?v=5y_SbnPx_cE&t=37s"}
 end
